@@ -16,6 +16,9 @@
 		2EC1B2002930E3110026780B /* FocusTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B1FF2930E3110026780B /* FocusTimerTests.swift */; };
 		2EC1B20A2930E3110026780B /* FocusTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B2092930E3110026780B /* FocusTimerUITests.swift */; };
 		2EC1B20C2930E3110026780B /* FocusTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B20B2930E3110026780B /* FocusTimerUITestsLaunchTests.swift */; };
+		2EC1B2202930E6D20026780B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B21F2930E6D20026780B /* ColorExtension.swift */; };
+		2EC1B2222930E76D0026780B /* TimerScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B2212930E76D0026780B /* TimerScreenView.swift */; };
+		2EC1B2242931048F0026780B /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B2232931048F0026780B /* TimerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		2EC1B2052930E3110026780B /* FocusTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC1B2092930E3110026780B /* FocusTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerUITests.swift; sourceTree = "<group>"; };
 		2EC1B20B2930E3110026780B /* FocusTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2EC1B21F2930E6D20026780B /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		2EC1B2212930E76D0026780B /* TimerScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerScreenView.swift; sourceTree = "<group>"; };
+		2EC1B2232931048F0026780B /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +105,11 @@
 		2EC1B1E72930E3100026780B /* FocusTimer */ = {
 			isa = PBXGroup;
 			children = (
-				2EC1B1E82930E3100026780B /* FocusTimerApp.swift */,
-				2EC1B1EA2930E3100026780B /* Persistence.swift */,
-				2EC1B1EF2930E3100026780B /* ContentView.swift */,
-				2EC1B1F12930E3100026780B /* Assets.xcassets */,
-				2EC1B1F32930E3100026780B /* FocusTimer.entitlements */,
-				2EC1B1EC2930E3100026780B /* FocusTimer.xcdatamodeld */,
+				2EC1B2192930E4010026780B /* App */,
+				2EC1B2182930E3F80026780B /* Views */,
+				2EC1B21A2930E40A0026780B /* Managers */,
+				2EC1B21B2930E44E0026780B /* Services */,
+				2EC1B21D2930E4A20026780B /* Helpers */,
 				2EC1B1F42930E3100026780B /* Preview Content */,
 			);
 			path = FocusTimer;
@@ -133,6 +138,66 @@
 				2EC1B20B2930E3110026780B /* FocusTimerUITestsLaunchTests.swift */,
 			);
 			path = FocusTimerUITests;
+			sourceTree = "<group>";
+		};
+		2EC1B2182930E3F80026780B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1B21C2930E4880026780B /* TimerScreen */,
+				2EC1B1EF2930E3100026780B /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2EC1B2192930E4010026780B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1B1F32930E3100026780B /* FocusTimer.entitlements */,
+				2EC1B1F12930E3100026780B /* Assets.xcassets */,
+				2EC1B1E82930E3100026780B /* FocusTimerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2EC1B21A2930E40A0026780B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1B1EA2930E3100026780B /* Persistence.swift */,
+				2EC1B2232931048F0026780B /* TimerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2EC1B21B2930E44E0026780B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1B1EC2930E3100026780B /* FocusTimer.xcdatamodeld */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2EC1B21C2930E4880026780B /* TimerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1B2212930E76D0026780B /* TimerScreenView.swift */,
+			);
+			path = TimerScreen;
+			sourceTree = "<group>";
+		};
+		2EC1B21D2930E4A20026780B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1B21E2930E6B70026780B /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2EC1B21E2930E6B70026780B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1B21F2930E6D20026780B /* ColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +332,11 @@
 			files = (
 				2EC1B1EE2930E3100026780B /* FocusTimer.xcdatamodeld in Sources */,
 				2EC1B1E92930E3100026780B /* FocusTimerApp.swift in Sources */,
+				2EC1B2222930E76D0026780B /* TimerScreenView.swift in Sources */,
 				2EC1B1F02930E3100026780B /* ContentView.swift in Sources */,
 				2EC1B1EB2930E3100026780B /* Persistence.swift in Sources */,
+				2EC1B2242931048F0026780B /* TimerManager.swift in Sources */,
+				2EC1B2202930E6D20026780B /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +487,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FocusTimer/FocusTimer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FocusTimer/App/FocusTimer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusTimer/Preview Content\"";
@@ -427,6 +496,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -457,7 +527,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FocusTimer/FocusTimer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FocusTimer/App/FocusTimer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusTimer/Preview Content\"";
@@ -465,6 +536,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
